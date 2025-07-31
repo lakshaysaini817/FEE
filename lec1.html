@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centered Form</title>
+  <style>
+    body {
+      background-color: #cde0ea; 
+      font-family: Arial, sans-serif;
+    }
+    .form-container {
+      width: 50%;
+      margin: 30px auto;
+      text-align: center;
+      border: 1px solid #3c0d6e;
+    }
+
+    table {
+      margin: 0 auto; 
+      width: 100%;
+    }
+
+    td {
+      text-align: left;
+    }
+
+    h2 {
+      text-align: center;
+      color: #345468;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Information Form</h2>
+
+    <form action ="#" method="post">
+      <table border="1" cellpadding="8" cellspacing="0">
+
+        <tr>
+          <td><label for="name">Name:</label></td>
+          <td><input type="text" id="name" name="name"></td>
+        </tr>
+
+        <tr>
+          <td><label for="age">Age:</label></td>
+          <td><input type="number" id="age" name="age"></td>
+        </tr>
+
+        <tr>
+          <td><label for="password">Password:</label></td>
+          <td><input type="password" id="password" name="password"></td>
+        </tr>
+
+        <tr>
+          <td><label for="dob">Date of Birth:</label></td>
+          <td><input type="date" id="dob" name="dob"></td>
+        </tr>
+
+        <tr>
+          <td><label for="admission_month">Month of Admission:</label></td>
+          <td><input type="month" id="admission_month" name="admission_month"></td>
+        </tr>
+
+        <tr>
+          <td><label for="passing_year">Year of Passing:</label></td>
+          <td><input type="number" id="passing_year" name="passing_year" min="1900" max="2100"></td>
+        </tr>
+
+        <tr>
+          <td><label for="gender">Gender:</label></td>
+          <td>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+          </td>
+        </tr>
+
+        <tr>
+          <td><label for="qualification">Qualification:</label></td>
+          <td><input type="text" id="qualification" name="qualification"></td>
+        </tr>
+
+        <tr>
+          <td><label for="branch">Branch Name:</label></td>
+          <td><input type="text" id="branch" name="branch"></td>
+        </tr>
+
+        <tr>
+          <td><label for="category">Category:</label></td>
+          <td>
+            <select id="category" name="category">
+              <option value="general">General</option>
+              <option value="obc">OBC</option>
+              <option value="sc">SC</option>
+              <option value="st">ST</option>
+              <option value="other">Other</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td><label for="slider">Select Value (0 to 100):</label></td>
+          <td>
+            <input type="range" id="slider" name="slider" min="0" max="100" value="50"
+                   oninput="document.getElementById('sliderValue').innerText = this.value">
+            <span id="sliderValue">50</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2" style="text-align: center;">
+            <input type="submit" value="Submit">
+          </td>
+        </tr>
+
+      </table>
+    </form>
+  </div>
+
+</body>
+</html>
