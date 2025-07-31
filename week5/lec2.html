@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced Podcast Player</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #1e1313;
+      padding: 20px;
+    }
+    .player-container {
+      background: #44b9d6;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 600px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: auto;
+    }
+    audio {
+      width: 100%;
+      outline: none;
+    }
+    .transcript {
+      margin-top: 20px;
+      padding: 15px;
+      background: #bf7a7a;
+      border-left: 5px solid #c928e1;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .transcript h3 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="player-container">
+  <h2>🎧 Latest Podcast Episode</h2>
+  
+  <audio id="podcast" controls loop muted autoplay preload="metadata">
+    <source src="music.mp3" type="audio/mpeg">
+    <source src="music.ogg" type="audio/ogg">
+    Your browser does not support the audio element. Please <a href="episode1.mp3" download>download the episode</a>.
+  </audio>
+
+  <div class="transcript">
+    <h3>Transcript:</h3>
+    <p>
+      Welcome to the latest episode of our podcast. Today, we’ll discuss the future of AI and how it’s transforming industries.
+      In the first segment, we talk about real-world applications of machine learning...
+     
+    </p>
+  </div>
+</div>
+
+<script>
+ 
+  document.addEventListener("DOMContentLoaded", function() {
+    const audio = document.getElementById('podcast');
+    audio.muted = true;
+    audio.play().catch(e => {
+      console.warn("Autoplay prevented:", e);
+    });
+  });
+</script>
+
+</body>
+</html>
+
+</body>
+</html> 
